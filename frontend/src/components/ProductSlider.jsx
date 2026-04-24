@@ -64,7 +64,7 @@ const ProductSlider = () => {
   const product = products[index];
 
   return (
-    <div 
+    <div
       className="w-full flex-grow flex flex-col pt-14 pb-8 overflow-x-hidden no-scrollbar bg-[#fafaf9]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -82,14 +82,14 @@ const ProductSlider = () => {
           <div className="relative w-full h-[220px] mb-4 mt-2 px-6">
             <div className="w-[220px] h-[220px] mx-auto bg-white rounded-3xl shadow-md overflow-hidden p-2 border border-gray-100 flex items-center justify-center relative">
               <div className="w-full h-full bg-gray-50 rounded-2xl relative overflow-hidden flex items-center justify-center">
-                 <img 
-                   src={product.image} 
-                   alt={product.name} 
-                   className="absolute inset-0 w-full h-full object-cover opacity-90"
-                 />
-                 <div className="absolute inset-0 bg-black/10"></div>
-                 {/* Floating micro thumbnail */}
-                 <div className={`absolute bottom-4 left-4 w-12 h-10 ${product.thumbnailColor} rounded-md shadow-sm border-l-4 ${product.borderColor} opacity-90`}></div>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="absolute inset-0 w-full h-full object-cover opacity-90"
+                />
+                <div className="absolute inset-0 bg-black/10"></div>
+                {/* Floating micro thumbnail */}
+                <div className={`absolute bottom-4 left-4 w-12 h-10 ${product.thumbnailColor} rounded-md shadow-sm border-l-4 ${product.borderColor} opacity-90`}></div>
               </div>
             </div>
           </div>
@@ -132,12 +132,12 @@ const ProductSlider = () => {
               <div className="absolute -top-1.5 left-8 w-3 h-3 bg-white border-t border-l border-gray-100 transform rotate-45"></div>
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-6 h-6 rounded-full bg-[#e5ecd2] flex items-center justify-center">
-                   <svg viewBox="0 0 24 24" className="w-4 h-4 text-olive-900" fill="currentColor">
-                      <circle cx="12" cy="12" r="8" />
-                      <circle cx="9.5" cy="10" r="1.5" fill="white" />
-                      <circle cx="14.5" cy="10" r="1.5" fill="white" />
-                      <path d="M10 14Q12 16 14 14" stroke="white" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-                   </svg>
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 text-olive-900" fill="currentColor">
+                    <circle cx="12" cy="12" r="8" />
+                    <circle cx="9.5" cy="10" r="1.5" fill="white" />
+                    <circle cx="14.5" cy="10" r="1.5" fill="white" />
+                    <path d="M10 14Q12 16 14 14" stroke="white" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                  </svg>
                 </div>
                 <span className="font-bold text-gray-900 text-[14px]">Oliver Says:</span>
               </div>
