@@ -1,5 +1,8 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import MegaMenu from './MegaMenu';
+import BlogDropdown from './BlogDropdown';
+import FoodDropdown from './FoodDropdown';
 
 const Navbar = () => {
   const navItems = [
@@ -34,9 +37,26 @@ const Navbar = () => {
       {/* Desktop Menu Items */}
       <div className="hidden lg:flex items-center gap-8">
         {navItems.map((item, index) => (
-          <div key={index} className="flex items-center gap-1 text-[15px] font-medium text-olive-900/80 hover:text-olive-900 cursor-pointer transition-colors">
-            {item.name}
-            {item.hasDropdown && <ChevronDown className="w-4 h-4 ml-0.5 opacity-60" />}
+          <div key={index} className="relative group py-2">
+            <div className="flex items-center gap-1 text-[15px] font-medium text-olive-900/80 hover:text-olive-900 cursor-pointer transition-colors">
+              {item.name}
+              {item.hasDropdown && <ChevronDown className="w-4 h-4 ml-0.5 opacity-60 transition-transform group-hover:rotate-180 duration-300" />}
+            </div>
+            
+            {/* Render Mega Menu on hover for Solutions */}
+            {item.name === 'Solutions' && (
+              <MegaMenu />
+            )}
+
+            {/* Render Blog Dropdown on hover for Blog */}
+            {item.name === 'Blog' && (
+              <BlogDropdown />
+            )}
+
+            {/* Render Food Dropdown on hover for Food */}
+            {item.name === 'Food' && (
+              <FoodDropdown />
+            )}
           </div>
         ))}
       </div>
